@@ -12,12 +12,9 @@ class Loading extends StatefulWidget {
 class _LoadingState extends State<Loading> {
 
   void getData() async {
-    Response response =
-        await get('https://jsonplaceholder.typicode.com/todos/1');
+    Response response = get('http://worldtimeapi.org/api/timezone/Europe/London');
     Map data = jsonDecode(response.body);
-
     print(data);
-    print(data['title']);
   }
 
   @override
